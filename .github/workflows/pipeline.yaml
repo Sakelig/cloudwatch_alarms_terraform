@@ -9,6 +9,9 @@ on:
 jobs:
   terraform:
     name: "Terraform"
+    defaults:
+      run:
+      working-directory: ./infra
     runs-on: ubuntu-latest
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
